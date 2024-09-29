@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>commom</artifactId>
+    <artifactId>common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SMB-commom</name>
-    <description>SMB-commom</description>
+    <name>common</name>
+    <description>SMB-common</description>
     <properties>
         <java.version>17</java.version>
         <maven.test.skip>true</maven.test.skip>
