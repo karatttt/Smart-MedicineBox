@@ -23,8 +23,8 @@
 
     <modules>
 
-        <module>SMB-doctor</module>
-        <module>SMB-commom</module>
+        <module>doctor</module>
+        <module>commom</module>
 
     </modules>
 </project>
