@@ -10,6 +10,8 @@ import com.example.smbdoctor.service.impl.MedicationInfoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 
 @RestController
 @RequestMapping("doctor")
@@ -20,6 +22,13 @@ public class MedicineController {
     @Autowired
     MedicationInfoService medicationInfoService;
 
+    @GetMapping( "/signature")
+    public String get(HttpServletRequest request, String signature, String timestamp, String nonce, String echostr) {
+        if (request.getMethod().equalsIgnoreCase("get")) {//用来校验，一般会验证前端配置的token等，这里简化了代码。
+            return echostr;
+        }
+        return echostr;
+    }
     @GetMapping("/list")
     public  Result list(){
         return Result.success("haha");
