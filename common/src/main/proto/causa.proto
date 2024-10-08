@@ -1,0 +1,25 @@
+//使用proto3语法
+    syntax = "proto3";
+
+//生成多个java文件
+//option java_multiple_files = true;
+//把生成的文件放到哪个包下
+option java_package = "com.smb";
+//输出的类名
+option java_outer_classname = "GrpcParams";
+
+
+//定义的一个请求参数对象
+message MedicineReq {
+
+  //code参数，编号为2
+  int32 medicine_id=1;
+}
+//定义的一个返回结果对象
+message MedicineResponse {
+  //resut参数，编号为1
+  string name = 1;
+  string type = 2;
+  string description = 3;
+  string imageurl = 4;
+}

@@ -1,13 +1,13 @@
 package com.example.smbdoctor.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.api.R;
-import com.example.smbcommom.util.Result;
+import com.example.smbcommon.util.Result;
 
 import com.example.smbdoctor.entity.MedicationInfo;
 import com.example.smbdoctor.service.MedicationInfoService;
-import com.example.smbdoctor.service.impl.MedicationInfoServiceImpl;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("doctor")
-public class MedicineController {
+public class MedicineController implements BeanFactoryPostProcessor {
 
 
 
@@ -50,5 +50,8 @@ public class MedicineController {
     }
 
 
-
+    @Override
+    public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
+        
+    }
 }

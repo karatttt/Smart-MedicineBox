@@ -20,6 +20,13 @@
 <!--    <packaging>war</packaging>-->
     <dependencies>
 
+        <!--        引入gRPC服务提供端依赖-->
+        <dependency>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-server-spring-boot-starter</artifactId>
+            <version>2.14.0.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>

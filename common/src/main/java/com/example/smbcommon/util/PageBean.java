@@ -1,4 +1,4 @@
-package com.example.smbcommom.util;
+package com.example.smbcommon.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
